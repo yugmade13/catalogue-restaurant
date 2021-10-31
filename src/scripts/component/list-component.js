@@ -1,6 +1,3 @@
-/* eslint-disable linebreak-style */
-/* eslint-disable no-underscore-dangle */
-/* eslint-disable import/extensions */
 import './item-component.js';
 
 class ListElement extends HTMLElement {

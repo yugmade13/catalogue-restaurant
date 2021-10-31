@@ -1,7 +1,3 @@
-/* eslint-disable linebreak-style */
-/* eslint-disable no-underscore-dangle */
-/* eslint-disable import/extensions */
-
 import 'regenerator-runtime'; /* for async await transpile */
 import './component/list-component.js';
 import '../styles/main.css';
