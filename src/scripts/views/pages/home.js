@@ -15,7 +15,7 @@ const Home = {
                 </div>
             </div>
             <h3 id="maincontent" class="latest_label">Explore Resto_</h3>
-            <div id="listResto" class="content_list"><div>
+            <div id="listResto" class="content_list"></div>
         `;
     },
 

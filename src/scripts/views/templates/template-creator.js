@@ -18,4 +18,8 @@ const createRestaurantItemTemplate = (restaurant) => `
     </div>
 `;
 
+const createRestaurantDetailTemplate = (restaurant) => `
+    
+`;
+
 export { createRestaurantItemTemplate };
