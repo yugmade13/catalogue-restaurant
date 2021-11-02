@@ -4,18 +4,20 @@
 
 import DbRestoSource from '../../data/dbresto-source';
 import UrlParser from '../../routes/url-parser';
+import { createRestaurantDetailTemplate } from '../templates/template-creator';
 
 const Detail = {
     async render() {
         return `
-            <h3 id="maincontent" class="latest_label">Detail</h3>
+        <div id="restoDetail" class="resto_detail"></div>
         `;
     },
 
     async afterRender() {
         const url = UrlParser.parseActiveUrlWithoutCombiner();
         const restaurant = await DbRestoSource.detailResto(url.id);
-        console.log(restaurant);
+        const restaurantDetail = document.querySelector('#restoDetail');
+        restaurantDetail.innerHTML = createRestaurantDetailTemplate(restaurant.restaurant);
     },
 };
 

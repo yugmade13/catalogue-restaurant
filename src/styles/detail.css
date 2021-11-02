@@ -1,0 +1,42 @@
+.resto_image {
+    width: 100%;
+    max-height: 380px;
+    object-fit: cover;
+    object-position: center;
+}
+
+.resto_info {
+    padding: 9px 18px 9px;
+}
+
+.resto_title {
+    font-size: 32px;
+    font-weight: 600;
+}
+
+.resto_address, .resto_city {
+    font-size: 16px;
+    color: gray;
+}
+
+.resto_description {
+    font-size: 18px;
+    margin-top: 14px;
+}
+
+.resto_overview {
+    padding: 9px 18px 9px;
+}
+
+.resto_list_food, .resto_list_drink {
+    padding: 4px;
+}
+
+.food_title, .drink_title {
+    font-size: 22px;
+}
+
+.list_food li, .list_drink li {
+    font-size: 18px;
+    margin-left: 24px;
+}

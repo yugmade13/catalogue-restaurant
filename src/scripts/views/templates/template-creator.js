@@ -19,7 +19,28 @@ const createRestaurantItemTemplate = (restaurant) => `
 `;
 
 const createRestaurantDetailTemplate = (restaurant) => `
-    
+    <img class="resto_image" src="${API_ENDPOINT.IMAGE}${restaurant.pictureId}" alt="${restaurant.name}">
+    <div class="resto_body">
+        <div class="resto_info">
+            <h2 class="resto_title">${restaurant.name}</h2>
+            <p class="resto_address">${restaurant.address}, <span class="resto_city">Kota ${restaurant.city}</span></p>
+            <p class="resto_description">${restaurant.description}</p>
+        </div>
+        <div class="resto_overview">
+            <div class="resto_list_food">
+                <h3 class="food_title">Menu Makanan</h3>
+                <ul class="list_food">
+                    ${restaurant.menus.foods.map((food) => `<li>${food.name}</li>`).join('')}
+                </ul>
+            </div>
+            <div class="resto_list_drink">
+                <h3 class="drink_title">Menu Minuman</h3>
+                <ul class="list_drink">
+                ${restaurant.menus.drinks.map((drink) => `<li>${drink.name}</li>`).join('')}
+                </ul>
+            </div>
+        </div>
+    </div>
 `;
 
-export { createRestaurantItemTemplate };
+export { createRestaurantItemTemplate, createRestaurantDetailTemplate };

@@ -53,6 +53,11 @@
         font-size: 12px;
     }
 
+    .resto_overview {
+        display: flex;
+        justify-content: space-evenly;
+    }
+
 }
 
 @media screen and (min-width: 770px) {
@@ -60,17 +65,35 @@
         grid-template-columns: 1fr 1fr;
         grid-column-gap: 10px;
     }
+
+    .resto_overview {
+        display: block;
+    }
+
+    .resto_body {
+        display: grid;
+        grid-template-columns: 2fr 1fr;
+    }
 }
 
 @media screen and (min-width: 920px) {
     .content_list {
         grid-template-columns: 1fr 1fr 1fr;
     }
+
+    .resto_body {
+        grid-template-columns: 3fr 1fr;
+    }
 }
 
 @media screen and (min-width: 1200px) {
     .hero {
         width: 1000px;
+        margin: 24px auto 0;
+        border-radius: 25px;
+    }
+
+    .resto_image {
         margin: 24px auto 0;
         border-radius: 25px;
     }
