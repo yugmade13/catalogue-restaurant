@@ -7,6 +7,7 @@ import CONFIG from './config';
 const API_ENDPOINT = {
     LIST: `${CONFIG.BASE_URL}list`,
     IMAGE: `${CONFIG.BASE_URL}images/medium/`,
+    SEARCH: `${CONFIG.BASE_URL}search?q=`,
     DETAIL: (id) => `${CONFIG.BASE_URL}detail/${id}`,
 };
 

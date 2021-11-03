@@ -9,11 +9,18 @@ import '../styles/main.css';
 import '../styles/detail.css';
 import '../styles/responsive.css';
 import App from './views/app';
+import SearchBox from './views/search-box';
 
 const app = new App({
   menuOpen: document.querySelector('#menu_open'),
   navDrawer: document.querySelector('.nav'),
   menuClose: document.querySelector('#menu_close'),
+  content: document.querySelector('.content'),
+});
+
+const searchBox = new SearchBox({
+  search: document.querySelector('#search'),
+  button: document.querySelector('#submit'),
   content: document.querySelector('.content'),
 });
 
@@ -24,4 +31,5 @@ window.addEventListener('hashchange', () => {
 
 window.addEventListener('load', () => {
   app.renderPage();
+  searchBox.renderPage();
 });
