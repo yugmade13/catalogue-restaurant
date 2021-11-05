@@ -40,3 +40,97 @@
     font-size: 18px;
     margin-left: 24px;
 }
+
+.review_customers {
+    padding: 18px;
+}
+
+.review_title {
+    font-size: 18px;
+}
+
+.review_list {
+    padding: 12px;
+}
+
+.review_item {
+    padding: 4px;
+    margin: 4px 0;
+    display: flex;
+    flex-direction: row;
+}
+
+.avatar {
+    font-size: 36px;
+}
+
+.review_overview {
+    padding: 4px 8px;
+}
+
+.review_info {
+    background-color: rgb(240, 238, 238);
+    border-radius: 15px;
+    padding: 12px;
+}
+
+.review_name {
+    font-size: 14px;
+}
+
+.review_description {
+    font-size: 13px;
+}
+
+.review_extra {
+    font-size: 12px;
+    display: flex;
+    color: black;
+}
+
+.like, .reply {
+    text-decoration: none;
+    color: black;
+    margin: 2px 4px 0 12px;
+}
+
+.like:hover, .reply:hover {
+    border-bottom: 1px solid black;
+}
+
+.review_date {
+    margin: 2px 0 0 16px
+}
+
+.form {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.textarea {
+    width: 80%;
+    height: 125px;
+    outline: none;
+    font-size: 16px;
+    font-family: Poppins, Arial, Helvetica, sans-serif;
+    padding: 4px 8px;
+}
+
+.form_submit {
+    margin: 8px 0 24px;
+    width: 80%;
+    display: grid;
+    grid-template-columns: 3fr 1fr;
+    gap: 8px;
+}
+
+.textName {
+    padding: 4px;
+    outline: none;
+    font-family: Poppins, Arial, Helvetica, sans-serif;
+}
+
+.submitReview {
+    padding: 4px;
+}

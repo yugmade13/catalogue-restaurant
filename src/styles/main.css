@@ -108,7 +108,7 @@ body {
     display: flex;
 }
 
-input[type=text] {
+.search_resto {
     padding: 12px;
     width: 100%;
     font-size: 16px;
@@ -116,7 +116,7 @@ input[type=text] {
     border: none;
 }
 
-button[type=submit] {
+.submit_resto {
     padding: 11px 12px;
     font-size: 16px;
     color: #F5F5F5;

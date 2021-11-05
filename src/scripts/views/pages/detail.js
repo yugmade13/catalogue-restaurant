@@ -10,6 +10,13 @@ const Detail = {
     async render() {
         return `
         <div id="restoDetail" class="resto_detail"></div>
+        <div id="form" class="form">
+            <textarea name="text-area" id="textArea" class="textarea" placeholder="Comment.."></textarea>
+            <div class="form_submit">
+                <input type="text" name="text" id="textName" class="textName" placeholder="Enter your name">
+                <input id="submitReview" class="submitReview" type="submit" value="Submit">
+            </div>
+        </div>
         `;
     },
 
