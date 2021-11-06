@@ -8,6 +8,7 @@ const API_ENDPOINT = {
     LIST: `${CONFIG.BASE_URL}list`,
     IMAGE: `${CONFIG.BASE_URL}images/medium/`,
     SEARCH: `${CONFIG.BASE_URL}search?q=`,
+    POST_REVIEW: `${CONFIG.BASE_URL}review`,
     DETAIL: (id) => `${CONFIG.BASE_URL}detail/${id}`,
 };
 

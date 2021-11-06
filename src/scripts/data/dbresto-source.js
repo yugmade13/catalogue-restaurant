@@ -29,6 +29,17 @@ class DbRestoSource {
                 }
             });
     }
+
+    static async postReview(data) {
+        fetch(API_ENDPOINT.POST_REVIEW, {
+            method: 'POST',
+            headers: {
+                'Content-Type': 'application/json',
+            },
+            body: JSON.stringify(data),
+        });
+        this.detailResto(data.id);
+    }
 }
 
 export default DbRestoSource;

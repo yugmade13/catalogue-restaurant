@@ -1,4 +1,5 @@
 /* eslint-disable linebreak-style */
+/* eslint-disable indent */
 /* eslint-disable no-unused-vars */
 /* eslint-disable eol-last */
 
@@ -41,27 +42,27 @@ const createRestaurantDetailTemplate = (restaurant) => `
             </div>
         </div>
     </div>
-    <div class="review_customers">
-            <h4 class="review_title">Customers Review</h4>
-            <div id="reviewList" class="review_list">
-                ${restaurant.customerReviews.map((review) => `
-                    <div class="review_item">
-                        <i class="avatar fas fa-user-circle"></i>
-                        <div class="review_overview">
-                            <div class="review_info">
-                                <h5 class="review_name">${review.name}</h5>
-                            <p class="review_description">${review.review}</p>
-                            </div>
-                            <div class="review_extra">
-                                <a class="like" href="#">Like</a>
-                                <a class="reply" href="#">Reply</a>
-                                <p class="review_date">${review.date}</p>
-                            </div>
-                        </div>
-                    </div>
-                `).join('')}
-            </div>
-        </div>
 `;
 
-export { createRestaurantItemTemplate, createRestaurantDetailTemplate };
+const createRestaurantReviewTemplate = (data) => `
+    <div class="review_item">
+        <i class="avatar fas fa-user-circle"></i>
+        <div class="review_overview">
+            <div class="review_info">
+                <h5 class="review_name">${data.name}</h5>
+            <p class="review_description">${data.review}</p>
+            </div>
+            <div class="review_extra">
+                <a class="like" href="#">Like</a>
+                <a class="reply" href="#">Reply</a>
+                <p class="review_date">${data.date}</p>
+            </div>
+        </div>
+    </div>
+`;
+
+export {
+    createRestaurantItemTemplate,
+    createRestaurantDetailTemplate,
+    createRestaurantReviewTemplate,
+};
