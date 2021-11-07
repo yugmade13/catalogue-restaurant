@@ -8,6 +8,7 @@ import 'regenerator-runtime'; /* for async await transpile */
 import '../styles/main.css';
 import '../styles/detail.css';
 import '../styles/responsive.css';
+import '../styles/loading.css';
 import App from './views/app';
 import SearchBox from './views/search-box';
 

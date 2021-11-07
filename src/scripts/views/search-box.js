@@ -14,6 +14,8 @@ class SearchBox {
 
     async renderPage() {
         this._button.addEventListener('click', () => {
+            const loading = document.querySelector('.loading_bg');
+            loading.style.display = 'block';
             this._content.innerHTML = Search.render();
             Search.afterRender(this._search.value);
         });

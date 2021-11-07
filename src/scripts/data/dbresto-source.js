@@ -1,10 +1,12 @@
 /* eslint-disable linebreak-style */
+/* eslint-disable no-alert */
 /* eslint-disable prefer-promise-reject-errors */
 /* eslint-disable no-else-return */
 /* eslint-disable eol-last */
 /* eslint-disable indent */
 
 import API_ENDPOINT from '../globals/api-endpoint';
+import PostCutomerReview from '../utils/post-customer-review';
 
 class DbRestoSource {
     static async listResto() {
@@ -37,8 +39,14 @@ class DbRestoSource {
                 'Content-Type': 'application/json',
             },
             body: JSON.stringify(data),
-        });
-        this.detailResto(data.id);
+        })
+        .then((response) => response.json())
+        .then((resJson) => {
+            if (resJson.message === 'success') {
+                PostCutomerReview(data);
+            }
+        })
+        .catch((error) => alert(`${error} Gagal input!`));
     }
 }
 

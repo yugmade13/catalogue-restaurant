@@ -7,6 +7,10 @@
 
 import API_ENDPOINT from '../../globals/api-endpoint';
 
+const createConnectionInternetTemplate = () => `
+    <h3 class="latest_label">Cek Koneksi Internet</h3>
+`;
+
 const createRestaurantItemTemplate = (restaurant) => `
     <div class="content_item">
         <img class="img_item" src="${API_ENDPOINT.IMAGE}${restaurant.pictureId}" alt="Restaurant ${restaurant.name}">
@@ -65,4 +69,5 @@ export {
     createRestaurantItemTemplate,
     createRestaurantDetailTemplate,
     createRestaurantReviewTemplate,
+    createConnectionInternetTemplate,
 };

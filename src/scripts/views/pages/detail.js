@@ -7,7 +7,6 @@
 
 import DbRestoSource from '../../data/dbresto-source';
 import UrlParser from '../../routes/url-parser';
-import PostCutomerReview from '../../utils/post-customer-review';
 import { createRestaurantDetailTemplate, createRestaurantReviewTemplate } from '../templates/template-creator';
 
 const Detail = {
@@ -29,6 +28,9 @@ const Detail = {
     },
 
     async afterRender() {
+        const loading = document.querySelector('.loading_bg');
+        loading.style.display = 'block';
+
         const url = UrlParser.parseActiveUrlWithoutCombiner();
         const restaurant = await DbRestoSource.detailResto(url.id);
         const restaurantDetail = document.querySelector('#restoDetail');
@@ -37,6 +39,7 @@ const Detail = {
         const reviewList = document.querySelector('#reviewList');
         restaurant.restaurant.customerReviews.forEach((item) => {
             reviewList.innerHTML += createRestaurantReviewTemplate(item);
+            loading.style.display = 'none';
         });
 
         const inputReview = document.querySelector('#textArea');
@@ -53,7 +56,6 @@ const Detail = {
                     review: inputReview.value,
                 };
                 await DbRestoSource.postReview(data);
-                PostCutomerReview(data);
 
                 inputName.value = '';
                 inputReview.value = '';

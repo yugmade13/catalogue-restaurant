@@ -3,7 +3,7 @@
 /* eslint-disable indent */
 
 import DbRestoSource from '../../data/dbresto-source';
-import { createRestaurantItemTemplate } from '../templates/template-creator';
+import { createConnectionInternetTemplate, createRestaurantItemTemplate } from '../templates/template-creator';
 
 const Home = {
     async render() {
@@ -20,11 +20,20 @@ const Home = {
     },
 
     async afterRender() {
-        const restaurants = await DbRestoSource.listResto();
         const restaurantContainer = document.querySelector('#listResto');
-        restaurants.forEach((resto) => {
-            restaurantContainer.innerHTML += createRestaurantItemTemplate(resto);
-        });
+        const loading = document.querySelector('.loading_bg');
+        loading.style.display = 'block';
+
+        try {
+            const restaurants = await DbRestoSource.listResto();
+            restaurants.forEach((resto) => {
+                restaurantContainer.innerHTML += createRestaurantItemTemplate(resto);
+                loading.style.display = 'none';
+            });
+        } catch (error) {
+            restaurantContainer.innerHTML = createConnectionInternetTemplate();
+            loading.style.display = 'none';
+        }
     },
 };
 
