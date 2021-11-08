@@ -7,6 +7,7 @@
 
 import DbRestoSource from '../../data/dbresto-source';
 import UrlParser from '../../routes/url-parser';
+import LikeButtonInitiator from '../../utils/like-button-initiator';
 import { createRestaurantDetailTemplate, createRestaurantReviewTemplate } from '../templates/template-creator';
 
 const Detail = {
@@ -24,6 +25,7 @@ const Detail = {
                 <button id="submitReview" class="submitReview" type="submit">Send</button>
             </div>
         </div>
+        <div id="likeButtonContainer"></div>
         `;
     },
 
@@ -60,6 +62,11 @@ const Detail = {
                 inputName.value = '';
                 inputReview.value = '';
             }
+        });
+
+        LikeButtonInitiator.init({
+            likeButtonContainer: document.querySelector('#likeButtonContainer'),
+            restaurant,
         });
     },
 };
