@@ -11,6 +11,7 @@ import '../styles/responsive.css';
 import '../styles/loading.css';
 import App from './views/app';
 import SearchBox from './views/search-box';
+import swRegister from './utils/sw-register';
 
 const app = new App({
   menuOpen: document.querySelector('#menu_open'),
@@ -32,5 +33,6 @@ window.addEventListener('hashchange', () => {
 
 window.addEventListener('load', () => {
   app.renderPage();
+  swRegister();
   searchBox.renderPage();
 });
