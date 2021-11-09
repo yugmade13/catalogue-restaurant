@@ -10,17 +10,17 @@
 }
 
 .resto_title {
-    font-size: 32px;
+    font-size: 24px;
     font-weight: 600;
 }
 
 .resto_address, .resto_city {
-    font-size: 16px;
+    font-size: 14px;
     color: gray;
 }
 
 .resto_description {
-    font-size: 18px;
+    font-size: 16px;
     margin-top: 14px;
 }
 
@@ -33,11 +33,11 @@
 }
 
 .food_title, .drink_title {
-    font-size: 22px;
+    font-size: 18px;
 }
 
 .list_food li, .list_drink li {
-    font-size: 18px;
+    font-size: 16px;
     margin-left: 24px;
 }
 
@@ -126,7 +126,7 @@
 }
 
 .textName {
-    padding: 4px;
+    padding: 10px;
     outline: none;
     font-family: Poppins, Arial, Helvetica, sans-serif;
 }

@@ -111,14 +111,14 @@ body {
 .search_resto {
     padding: 12px;
     width: 100%;
-    font-size: 16px;
+    font-size: 18px;
     outline: none;
     border: none;
 }
 
 .submit_resto {
     padding: 11px 12px;
-    font-size: 16px;
+    font-size: 22px;
     color: #F5F5F5;
     background-color: #303841;
     border: none;
@@ -130,12 +130,13 @@ main {
     margin: 0 auto;
 }
 
-h4 a {
+.item_title a {
     text-decoration: none;
     color: #303841;
+    padding: 12px 12px 12px 0;
 }
 
-h4 a:hover {
+.item_title a:hover {
     color:#b4b4b4;
 }
 
@@ -187,17 +188,17 @@ span {
 
 .item_title {
     font-weight: 600;
-    font-size: 18px;
+    font-size: 24px;
 }
 
 .item_city {
-    font-size: 12px;
+    font-size: 14px;
     color: #303841;
     margin-top: 2px;
 }
 
 .item_description {
-    font-size: 14px;
+    font-size: 16px;
     margin-top: 12px;
 }
 
