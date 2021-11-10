@@ -57,8 +57,6 @@ const createRestaurantReviewTemplate = (data) => `
             <p class="review_description">${data.review}</p>
             </div>
             <div class="review_extra">
-                <a class="like" href="#">Like</a>
-                <a class="reply" href="#">Reply</a>
                 <p class="review_date">${data.date}</p>
             </div>
         </div>
@@ -66,13 +64,13 @@ const createRestaurantReviewTemplate = (data) => `
 `;
 
 const createLikeButtonTemplate = () => `
-    <button aria-label="like this movie" id="likeButton" class="like">
+    <button aria-label="like this movie" id="likeButton" class="likeButton">
         <i class="far fa-heart" aria-hidden="true"></i>
     </button>
 `;
 
 const createLikedButtonTemplate = () => `
-    <button aria-label="unlike this movie" id="likeButton" class="like">
+    <button aria-label="unlike this movie" id="likeButton" class="likeButton">
         <i class="fa fa-heart" aria-hidden="true"></i>
     </button>
 `;

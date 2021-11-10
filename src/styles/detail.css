@@ -84,22 +84,11 @@
 
 .review_extra {
     font-size: 12px;
-    display: flex;
     color: black;
-}
-
-.like, .reply {
-    text-decoration: none;
-    color: black;
-    margin: 2px 4px 0 12px;
-}
-
-.like:hover, .reply:hover {
-    border-bottom: 1px solid black;
 }
 
 .review_date {
-    margin: 2px 0 0 16px
+    margin: 2px 0 0 8px
 }
 
 .form {
@@ -135,7 +124,7 @@
     padding: 4px;
 }
 
-.like {
+.likeButton {
     font-size: 24px;
     position: fixed;
     bottom: 16px;

@@ -68,6 +68,12 @@ const Detail = {
             likeButtonContainer: document.querySelector('#likeButtonContainer'),
             restaurant,
         });
+
+        const skipLink = document.querySelector('.skip-link');
+        skipLink.addEventListener('click', (event) => {
+            event.preventDefault();
+            document.querySelector('.resto_detail').focus();
+        });
     },
 };
 
