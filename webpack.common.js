@@ -14,21 +14,21 @@ module.exports = {
   },
   module: {
     rules: [{
-        test: /\.css$/,
-        use: [{
-            loader: 'style-loader',
-          },
-          {
-            loader: 'css-loader',
-          },
-        ],
+      test: /\.css$/,
+      use: [{
+        loader: 'style-loader',
       },
       {
-        test: /\.(png|svg|jpg|jpeg|gif)$/,
-        use: [
-          'file-loader',
-        ],
+        loader: 'css-loader',
       },
+      ],
+    },
+    {
+      test: /\.(png|svg|jpg|jpeg|gif)$/,
+      use: [
+        'file-loader',
+      ],
+    },
     ],
   },
   plugins: [
@@ -41,7 +41,7 @@ module.exports = {
         from: path.resolve(__dirname, 'src/public/'),
         to: path.resolve(__dirname, 'dist/'),
       },
-    ],
+      ],
     }),
     new ServiceworkerWebpackPlugin({
       entry: path.resolve(__dirname, 'src/scripts/sw.js'),

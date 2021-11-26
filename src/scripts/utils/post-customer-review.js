@@ -22,8 +22,6 @@ const PostCutomerReview = (data) => {
                         <p class="review_description">${data.review}</p>
                     </div>
                     <div class="review_extra">
-                        <a class="like" href="#">Like</a>
-                        <a class="reply" href="#">Reply</a>
                         <p class="review_date">${date}</p>
                     </div>
                 </div>
