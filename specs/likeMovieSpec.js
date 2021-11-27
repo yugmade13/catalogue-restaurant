@@ -62,11 +62,11 @@ describe('Liking A Restaurant', () => {
             },
         });
 
-        // Tambahkan film dengan ID 1 ke daftar film yang disukai
+        // Tambahkan restaurant dengan ID 1 ke daftar film yang disukai
         await FavoriteRestaurantdb.putRestaurant({ id: 1 });
         // Simulasikan pengguna menekan tombol suka film
         document.querySelector('#likeButton').dispatchEvent(new Event('click'));
-        // tidak ada film yang ganda
+        // tidak ada restaurant yang ganda
         expect(await FavoriteRestaurantdb.getAllRestaurant()).toEqual([{ id: 1 }]);
 
         FavoriteRestaurantdb.deleteRestaurant(1);
