@@ -10,7 +10,7 @@ import { createLikeButtonTemplate, createLikedButtonTemplate } from '../views/te
 const LikeButtonInitiator = {
     async init({ likeButtonContainer, restaurant }) {
         this._likeButtonContainer = likeButtonContainer;
-        this._restaurant = restaurant.restaurant;
+        this._restaurant = restaurant;
 
         await this._renderButton();
     },

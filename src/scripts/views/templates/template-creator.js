@@ -64,13 +64,13 @@ const createRestaurantReviewTemplate = (data) => `
 `;
 
 const createLikeButtonTemplate = () => `
-    <button aria-label="like this movie" id="likeButton" class="likeButton">
+    <button aria-label="like this restaurant" id="likeButton" class="likeButton">
         <i class="far fa-heart" aria-hidden="true"></i>
     </button>
 `;
 
 const createLikedButtonTemplate = () => `
-    <button aria-label="unlike this movie" id="likeButton" class="likeButton">
+    <button aria-label="unlike this restaurant" id="likeButton" class="likeButton">
         <i class="fa fa-heart" aria-hidden="true"></i>
     </button>
 `;
