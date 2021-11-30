@@ -5,9 +5,10 @@
 /* eslint-disable eol-last */
 /* eslint-disable indent */
 
+import FavoriteRestaurantdb from '../../data/database';
 import DbRestoSource from '../../data/dbresto-source';
 import UrlParser from '../../routes/url-parser';
-import LikeButtonInitiator from '../../utils/like-button-initiator';
+import LikeButtonPresenter from '../../utils/like-button-presenter';
 import { createRestaurantDetailTemplate, createRestaurantReviewTemplate } from '../templates/template-creator';
 
 const Detail = {
@@ -64,8 +65,9 @@ const Detail = {
             }
         });
 
-        LikeButtonInitiator.init({
+        LikeButtonPresenter.init({
             likeButtonContainer: document.querySelector('#likeButtonContainer'),
+            favoriteRestaurant: FavoriteRestaurantdb,
             restaurant: restaurant.restaurant,
         });
     },
