@@ -26,6 +26,10 @@
     .open {
         transform: translate(0, 0);
     }
+
+    .hero {
+        background-image: url("../public/heros/hero-image_2-small.jpg");
+    }
 }
 
 @media screen and (min-width: 500px) {
