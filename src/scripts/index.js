@@ -9,6 +9,8 @@ import '../styles/main.css';
 import '../styles/detail.css';
 import '../styles/responsive.css';
 import '../styles/loading.css';
+import 'lazysizes';
+import 'lazysizes/plugins/parent-fit/ls.parent-fit';
 import App from './views/app';
 import SearchBox from './views/search-box';
 import swRegister from './utils/sw-register';
