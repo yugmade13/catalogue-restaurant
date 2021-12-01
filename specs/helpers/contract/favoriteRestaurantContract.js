@@ -5,7 +5,7 @@
 /* eslint-disable eol-last */
 
 const itActsAsFavoriteRestaurantModel = async (favoriteRestaurant) => {
-    it('should return the movie that has been added', async () => {
+    it('should return the restaurant that has been added', async () => {
         favoriteRestaurant.putRestaurant({ id: 1 });
         favoriteRestaurant.putRestaurant({ id: 2 });
 
@@ -14,7 +14,7 @@ const itActsAsFavoriteRestaurantModel = async (favoriteRestaurant) => {
         expect(await favoriteRestaurant.getRestaurant(3)).toEqual(undefined);
     });
 
-    it('should refuse a movie from being added if it does not have the correct property', async () => {
+    it('should refuse a restaurant from being added if it does not have the correct property', async () => {
         favoriteRestaurant.putRestaurant({ aProperty: 'property' });
 
         expect(await favoriteRestaurant.getAllRestaurant()).toEqual([]);
